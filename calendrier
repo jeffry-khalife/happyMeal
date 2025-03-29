@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="calendrier.js"></script>
+    <link rel="stylesheet" href="calendrier.css">
+    <title>Calendrier des Recettes</title>
+</head>
+<body>
+    <h2>Jour de la semaine</h2>
+    
+    <div class="container" id="recipes">
+        <div class="recipe" draggable="true" id="recipe1">Salade ceasar </div>
+        <div class="recipe" draggable="true" id="recipe2">Risotto champignons</div>
+        <div class="recipe" draggable="true" id="recipe3">poulet curry</div>
+        <div class="recipe" draggable="true" id="recipe4">Tarte pommes</div>
+        <div class="recipe" draggable="true" id="recipe5">Recette 1</div>
+        <div class="recipe" draggable="true" id="recipe6">Recette 1</div>
+        <div class="recipe" draggable="true" id="recipe7">Recette 1</div>
+        <div class="recipe" draggable="true" id="recipe8">Recette 1</div>
+        <div class="recipe" draggable="true" id="recipe9">Recette 1</div>
+    </div>
+    
+    <div class="calendar" id="calendar">
+        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Lundi</div>
+        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Mardi</div>
+        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Mercredi</div>
+        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Jeudi</div>
+        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Vendredi</div>
+        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Samedi</div>
+        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Dimanche</div>
+    </div>
+    
+
+</body>
+</html>
