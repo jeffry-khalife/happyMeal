@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-950 m-5 grid gap-10 lg:m-0 lg:my-12 lg:mx-20 lg:items-center">
+
+    
+    <div id="recettes-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    </div>
+
+    <div id="pagination" class="mt-6 flex justify-center">
+    </div>
+
+    <div id="modelConfirm" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4">
+        <div class="relative top-10 mx-auto shadow-xl rounded-md bg-indigo-200 max-w-md">
+            <div class="flex justify-end p-2">
+                <button onclick="closeModal('modelConfirm')" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="p-6 pt-0 text-center">
+                <img id="popup-image" class="w-full h-40 object-cover rounded-lg mb-4" alt="Recette Image">
+                <h3 id="popup-title" class="text-xl font-normal text-gray-500 mt-5 mb-6"></h3>
+                <p id="popup-category" class="text-sm text-gray-600 mb-4"></p>
+                <p id="popup-time" class="text-sm text-gray-600 mb-4"></p>
+
+                <h3 class="text-lg font-semibold mb-2">Ingrédients:</h3>
+                <ul id="popup-ingredients" class="list-disc pl-5 mb-4"></ul>
+
+                <h3 class="text-lg font-semibold mb-2">Étapes:</h3>
+                <ol id="popup-steps" class="list-decimal pl-5"></ol>
+
+                <div class="mt-4">
+                    <button id="add-to-shopping-list" class="bg-blue-950 text-white rounded-full px-4 py-2 hover:bg-green-700 transition mt-2">Ajouter à la liste de courses</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50">
+        <div id="toast" class="hidden bg-green-500 text-white p-4 rounded-lg shadow-lg opacity-0 transform transition-all duration-300">
+            <span id="toast-message">Recette ajoutée aux favoris!</span>
+        </div>
+    </div>
+    
+<script src="../js/script.js"></script>
+<script src="../js/favoris.js"></script>
+</body>
+</html>
