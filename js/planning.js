@@ -1,3 +1,22 @@
+document.querySelectorAll('.recipe').forEach(item => {
+    item.addEventListener('dragstart', drag);
+});
+
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drop(event) {
+    event.preventDefault();
+    let data = event.dataTransfer.getData("text");
+    let recipe = document.getElementById(data);
+    event.target.appendChild(recipe);
+}
+
 fetch('../json/data.json')
     .then(response => response.json())
     .then(data => {
