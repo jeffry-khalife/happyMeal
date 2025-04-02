@@ -24,16 +24,16 @@ fetch('../json/data.json')
     
         recettesPage.forEach((recette, index) => {
             const recetteDiv = document.createElement('article');
-            recetteDiv.className = 'sm:grid grid-cols-5 bg-indigo-200 shadow-sm p-7 relative lg:max-w-2xl sm:p-4 rounded-lg lg:col-span-2 lg:ml-20 mb-6 cursor-pointer';
+            recetteDiv.className = 'recette bg-green-500 p-4 rounded-lg shadow-md';
             recetteDiv.innerHTML = `
-                <img id="imagerecettes" src="${recette.image}" alt="${recette.nom}" class="w-full rounded-lg">
-                <div class="pt-5 self-center sm:pt-0 sm:pl-10 col-span-3">
-                    <h2 class="text-gray-800 capitalize text-xl font-bold">${recette.nom}</h2>
-                    <p class="text-sm text-gray-600 mt-2">${recette.categorie}</p>
-                </div>
-                <div class="justify-self-end">
-                    <img src="https://cdn4.iconfinder.com/data/icons/app-custom-ui-1/48/Bookmark-256.png" alt="Bookmark" class="w-8 absolute top-3 right-3 sm:relative sm:top-0 sm:right-0 cursor-pointer" id="favori-${startIndex + index}">
-                </div>
+                    <img src="${recette.image}" alt="${recette.nom}" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h2 class="text-xl font-bold text-blue-950 mb-2">${recette.nom}</h2>
+                    <p class="text-sm text-gray-600 mb-2">Catégorie : ${recette.categorie || 'Non spécifiée'}</p>
+                    <p class="text-sm text-gray-600 mb-2">Temps de préparation : ${recette.temps_preparation || 'Non spécifié'}</p>
+                    <button onclick="window.location.hash='${encodeURIComponent(recette.nom)}'" class="bg-blue-950 text-white rounded-full px-4 py-2 hover:bg-green-700 transition">Voir plus</button>
+                    <div class="justify-self-end">
+                        <img src="https://cdn4.iconfinder.com/data/icons/app-custom-ui-1/48/Bookmark-256.png" alt="Bookmark" class="w-8 absolute top-3 right-3 sm:relative sm:top-0 sm:right-0 cursor-pointer" id="favori-${startIndex + index}">
+                    </div>
             `;
     
             const favoriIcon = recetteDiv.querySelector(`#favori-${startIndex + index}`);
