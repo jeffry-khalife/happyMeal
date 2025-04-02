@@ -1,3 +1,18 @@
+document.getElementById('search-button').addEventListener('click', () => {
+    const searchInput = document.getElementById('search-recette').value.trim().toLowerCase();
+    const recettesList = document.getElementById('recettes-list').options;
+
+    let recetteFound = false;
+
+    for (let i = 0; i < recettesList.length; i++) {
+        if (recettesList[i].value.toLowerCase() === searchInput) {
+            recetteFound = true;
+            window.location.href = `recettes.html#${recettesList[i].value}`;
+            break;
+        }
+    }
+});
+
 document.querySelectorAll('.recipe').forEach(item => {
     item.addEventListener('dragstart', drag);
 });
