@@ -6,6 +6,7 @@
     <title>Planning</title>
     <link rel="stylesheet" href="../pages/planning.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body class="bg-green-50">
 
@@ -18,7 +19,7 @@
 
 <!--PLANNING-->
     <section class="ml-24 m-20 flex flex-col text-center items-center">
-        <h1 class="text-xl text-white font-bold py-2 px-4 rounded mt-3 bg-green-500 w-4/5 mb-8">Planning des repas</h1>
+        <h1 class="text-xl text-white font-bold py-2 px-4 rounded mt-2 bg-green-500 w-4/5 mb-8">Planning des repas</h1>
         <form id="form" class="flex flex-col items-center">
             <label for="date" class="text-black font-bold mt-3">Que voulez-vous manger ?</label>
             <select id="recette" name="recette" class="w-64 p-2 mb-4 mt-3 border border-gray-300 rounded">
@@ -28,46 +29,27 @@
 
         <form id="form" class="flex flex-col items-center">
             <label for="date" class="text-black font-bold mt-10">Quand ça ?</label>
-            <input type="date" id="date" name="date" class="w-80 p-2 mb-4 mt-3 border border-gray-300 rounded">
+            <input type="date" id="date" name="date" class="w-64 p-2 mb-4 mt-3 border border-gray-300 rounded">
             <button id="ajouter" class="text-white font-bold py-2 px-4 rounded mt-8 ml-2 mr-2 bg-green-500 hover:bg-lime-400">Ajouter</button>
         </form>
 
-        <table id="planning" class="hidden border-collapse border border-stone-950 w-1/2 mx-auto mt-24 text-center">
+        <table id="planning" class="hidden border-collapse w-1/2 mt-24 text-center">
             <thead>
                 <tr>
-                    <th class="px-4 py-2 text-blue-950 font-bold px-4 py-2 border border-blue-950">Date</th>
-                    <th class="px-4 py-2 text-blue-950 font-bold px-4 py-2 border border-blue-950">Recette</th>
+                    <th class="text-black font-bold border-black-500 bg-green-500">Date</th>
+                    <th class="text-blackfont-bold border-black-500 bg-green-500">Recette</th>
                 </tr>
             </thead>
-            <tbody class="px-4 py-2 border-stone-950"></tbody><!--les entrées du planning seront ajoutées ici-->
+            <tbody class="text-black"></tbody><!--les entrées du planning seront ajoutées ici-->
         </table>
     </section>
 
-    <h2>Jour de la semaine</h2>
-    
-    <div class="container" id="recipes">
-        <div class="recipe" draggable="true" id="recipe1">Salade ceasar </div>
-        <div class="recipe" draggable="true" id="recipe2">Risotto champignons</div>
-        <div class="recipe" draggable="true" id="recipe3">poulet curry</div>
-        <div class="recipe" draggable="true" id="recipe4">Tarte pommes</div>
-        <div class="recipe" draggable="true" id="recipe5">Recette 1</div>
-        <div class="recipe" draggable="true" id="recipe6">Recette 1</div>
-        <div class="recipe" draggable="true" id="recipe7">Recette 1</div>
-        <div class="recipe" draggable="true" id="recipe8">Recette 1</div>
-        <div class="recipe" draggable="true" id="recipe9">Recette 1</div>
-    </div>
-    
-    <div class="calendar" id="calendar">
-        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Lundi</div>
-        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Mardi</div>
-        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Mercredi</div>
-        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Jeudi</div>
-        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Vendredi</div>
-        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Samedi</div>
-        <div class="day" ondragover="allowDrop(event)" ondrop="drop(event)">Dimanche</div>
-    </div>
+    <button id="download-pdf" class="text-white font-bold py-2 px-4 rounded mt-2 mb-8 ml-4 bg-green-500 hover:bg-lime-400">
+        Télécharger le planning
+    </button>
 
     <script src="../js/planning.js"></script>
     <script src="../js/autocompletion.js"></script>
+    <script src="../js/pdf.js"></script>
 </body>
 </html>
