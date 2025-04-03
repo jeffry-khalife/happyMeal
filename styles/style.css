@@ -2,3 +2,29 @@
     width: 150px;
     height: 120px;
 }
+
+#download-pdf {
+    max-width: 230px !important;
+}
+
+.list-disc {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+}
+
+#popup-ingredients {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 10px !important; 
+}
+
+
+#popup-ingredients li {
+    display: flex !important;
+    align-items: center !important; 
+    gap: 10px !important; 
+}
+
+.ingredient-checkbox {
+    margin-right: 10px !important;
+}
