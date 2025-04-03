@@ -30,7 +30,7 @@ function afficherRecettes() {
                 <p class="text-sm text-gray-600 mb-2">Catégorie : ${recette.categorie || 'Non spécifiée'}</p>
                 <p class="text-sm text-gray-600 mb-2">Temps de préparation : ${recette.temps_preparation || 'Non spécifié'}</p>
                 <div class="flex justify-between items-center">
-                <button class="bg-green-500 text-white rounded-full px-4 py-2 hover:bg-green-700 transition">Voir plus</button>
+                <button class="bg-green-500 text-white rounded-full px-4 py-2 hover:bg-lime-400 transition">Voir plus</button>
                 <div class="justify-self-end">
                     <img src="../assets/images/off.jpg" alt="Bookmark" class="w-8 sm:relative sm:top-0 sm:right-0 cursor-pointer" id="favori-${startIndex + index}">
                 </div>
@@ -169,3 +169,26 @@ function ajouterAListeDeCourses() {
 }
 
 document.getElementById('add-to-shopping-list').addEventListener('click', ajouterAListeDeCourses);
+
+
+//autocompletion pour accéder à une recette via la barre de navigation
+document.getElementById("search-button").addEventListener("click", function () {
+    const searchQuery = document.getElementById("search-recette").value.toLowerCase().trim();
+
+    // Charger le fichier JSON contenant les recettes
+    fetch("../json/data.json")
+        .then(response => response.json())
+        .then(data => {
+            // Trouver la recette correspondant à la recherche
+            const recetteTrouvee = data.recettes.find(recette => recette.nom.toLowerCase() === searchQuery);
+
+            if (recetteTrouvee) {
+                // Rediriger vers l'ancre de la recette sur la page
+                const recetteId = encodeURIComponent(recetteTrouvee.nom); // Encodage pour éviter les problèmes avec les caractères spéciaux
+                window.location.href = `#${recetteId}`;
+            } else {
+                alert("Recette non trouvée !");
+            }
+        })
+        .catch(error => console.error("Erreur de chargement des recettes :", error));
+});
