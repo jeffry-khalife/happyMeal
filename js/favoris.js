@@ -1,3 +1,4 @@
+
 function chargerFavoris() {
     const favoris = JSON.parse(localStorage.getItem('favoris')) || [];
     const container = document.getElementById('favoris-container');
@@ -9,7 +10,7 @@ function chargerFavoris() {
     recetteDiv.innerHTML = `
         <img src="${recette.image}" alt="${recette.nom}" class="w-full rounded-lg">
         <div class="pt-5 self-center sm:pt-0 sm:pl-10 col-span-3">
-            <h2 class="text-gray-800 capitalize text-xl font-bold">${recette.nom}</h2>
+            <h2 class="text-green-500 capitalize text-xl font-bold">${recette.nom}</h2>
             <p class="text-sm text-gray-600 mt-2">${recette.categorie}</p>
         </div>
         <div class="justify-self-end">

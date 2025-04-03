@@ -1,13 +1,13 @@
 fetch('../json/data.json')
-        .then(response => response.json())
-        .then(data => {
-            const recettesContainer = document.getElementById('recettes-container');
+    .then(response => response.json())
+    .then(data => {
+        const recettesContainer = document.getElementById('recettes-container');
 
-            data.recettes.forEach(recette => {
-                // Créez un conteneur pour chaque recette
-                const recetteDiv = document.createElement('div');
-                recetteDiv.id = recette.nom; // Utilisez le nom comme ID
-                recetteDiv.className = 'recette bg-indigo-200 p-4 rounded-lg shadow-md';
+        data.recettes.forEach(recette => {
+            // Créez un conteneur pour chaque recette
+            const recetteDiv = document.createElement('div');
+            recetteDiv.id = recette.nom; // Utilisez le nom comme ID
+            recetteDiv.className = 'recette bg-indigo-200 p-4 rounded-lg shadow-md';
 
                 // Ajoutez le contenu de la recette
                 recetteDiv.innerHTML = `
@@ -22,4 +22,4 @@ fetch('../json/data.json')
                 recettesContainer.appendChild(recetteDiv);
             });
         })
-        .catch(error => console.error('Erreur lors du chargement des recettes :', error));
+.catch(error => console.error('Erreur lors du chargement des recettes :', error));

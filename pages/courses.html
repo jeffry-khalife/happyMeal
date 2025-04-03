@@ -6,12 +6,31 @@
     <title>Liste de Courses</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 m-5 grid gap-10 lg:m-0 lg:my-12 lg:mx-20 lg:items-center">
+<body class="bg-gray-100 m-5 grid gap-10 lg:m-0 lg:my-12 lg:mx-20 lg:items-center"> 
 
+<!--NAV BAR-->
+    <section class="text-right">
+        <input id="search-recette" list="recettes-list" placeholder="Rechercher une recette..." class="w-80 p-2 mb-4 mt-3 border border-green-50"/>
+        <datalist id="recettes-list"></datalist>
+        <button id="search-button" class="text-sm text-white font-bold py-2 px-4 rounded mt-3 ml-2 mr-2 bg-green-500 hover:bg-lime-400">Rechercher</button>
+    </section>
+
+<!--LISTES DE COURSES-->
     <h1 class="text-2xl font-bold text-center mb-6">Liste de Courses</h1>
 
     <ul id="shopping-list" class="list-disc pl-5"></ul>
+    
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50">
+        <div id="toast" class="hidden bg-green-500 text-white p-4 rounded-lg shadow-lg opacity-0 transform transition-all duration-300">
+            <span id="toast-message">Ingrédients ajoutés à votre liste de courses!</span>
+        </div>
+    </div>
+
+    <button id="download-pdf" class="text-white font-bold py-2 px-4 rounded mt-2 mb-8 ml-4 bg-green-500 hover:bg-lime-400">
+        Télécharger la Liste en PDF
+    </button>
 
    <script src="../js/courses.js"></script>
+   <script src="../js/pdf.js"></script>
 </body>
 </html>
