@@ -7,8 +7,8 @@ function afficherListeDeCourses() {
         const listItem = document.createElement('li');
         listItem.classList.add('flex', 'justify-between', 'items-center', 'mb-2');
         listItem.innerHTML = `
-            <span>${ingredient.quantite} ${ingredient.nom}</span>
-            <button onclick="supprimerDeListeDeCourses(${index})" class="text-red-500 hover:text-red-700">Supprimer</button>
+            <span>- ${ingredient.quantite} ${ingredient.nom}</span>
+            <button id="delete" onclick="supprimerDeListeDeCourses(${index})" class="text-black hover:text-indigo-200">Supprimer</button>
         `;
         container.appendChild(listItem);
     });
