@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning</title>
+    <link rel="stylesheet" href="../pages/planning.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body class="m-5 grid gap-10 lg:m-0 lg:my-12 lg:mx-20 lg:items-center">
+
+<!--NAV BAR-->
+    <section class="text-right">
+        <input id="search-recette" list="recettes-list" placeholder="Rechercher une recette..." class="w-80 p-2 mb-4 mt-3 border border-green-50"/>
+        <datalist id="recettes-list"></datalist>
+        <button id="search-button" class="text-sm text-white font-bold py-2 px-4 rounded mt-3 ml-2 mr-2 bg-green-500 hover:bg-lime-400">Rechercher</button>
+    </section>
+
+<!--PLANNING-->
+    <section class="ml-24 m-20 flex flex-col text-center items-center">
+        <h1 class="text-xl text-white font-bold py-2 px-4 rounded mt-2 bg-green-500 w-4/5 mb-8">Planning des repas</h1>
+        <form id="form" class="flex flex-col items-center">
+            <label for="date" class="text-black font-bold mt-3">Que voulez-vous manger ?</label>
+            <select id="recette" name="recette" class="w-64 p-2 mb-4 mt-3 border border-gray-300 rounded">
+                <option value="0"></option>
+            </select>
+        </form>
+
+        <form id="form" class="flex flex-col items-center">
+            <label for="date" class="text-black font-bold mt-10">Quand ça ?</label>
+            <input type="date" id="date" name="date" class="w-64 p-2 mb-4 mt-3 border border-gray-300 rounded">
+            <button id="ajouter" class="text-white font-bold py-2 px-4 rounded mt-8 ml-2 mr-2 bg-green-500 hover:bg-lime-400">Ajouter</button>
+        </form>
+
+        <table id="planning" class="hidden border-collapse w-1/2 mt-24 text-center">
+            <thead>
+                <tr>
+                    <th class="text-black font-bold border-black-500 bg-green-500">Date</th>
+                    <th class="text-blackfont-bold border-black-500 bg-green-500">Recette</th>
+                </tr>
+            </thead>
+            <tbody class="text-black"></tbody><!--les entrées du planning seront ajoutées ici-->
+        </table>
+    </section>
+
+    <button id="download-pdf" class="text-white font-bold py-2 px-4 rounded mt-2 mb-8 ml-4 bg-green-500 hover:bg-lime-400">
+        Télécharger le planning
+    </button>
+
+    <script src="../js/planning.js"></script>
+    <script src="../js/autocompletion.js"></script>
+    <script src="../js/pdf.js"></script>
+</body>
+</html>
