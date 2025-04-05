@@ -29,7 +29,7 @@
             "Placez le poulet dans un plat allant au four et enfournez-le pendant environ 1 heure ou jusqu'à ce qu'il soit bien doré et cuit à cœur.",
             "Laissez reposer quelques minutes avant de découper et de servir."
          ],
-         "image": "assets/images/poulet-rôti-à-la-provençale.png"
+         "image": "../assets/images/poulet-rôti-à-la-provençale.png"
       },
       {
          "nom":"Salade de quinoa aux légumes grillés",
@@ -68,7 +68,7 @@
             "Assaisonnez avec du jus de citron, du sel, du poivre et des feuilles de basilic frais.",
             "Servez la salade de quinoa aux légumes grillés, chaude ou froide."
          ],
-          "image": "assets/images/salade-de-quinoa.png"
+          "image": "../assets/images/salade-de-quinoa.png"
       },
       {
          "nom":"Tarte aux pommes",
@@ -109,7 +109,7 @@
             "Enfournez la tarte pendant environ 40 à 45 minutes, jusqu'à ce qu'elle soit dorée.",
             "Laissez refroidir avant de déguster."
          ],
-         "image": "assets/images/tarte-aux-pommes.png"
+         "image": "../assets/images/tarte-aux-pommes.png"
       },
       {
          "nom":"Soupe de lentilles",
@@ -150,7 +150,7 @@
             "Assaisonnez avec du sel et du poivre selon votre goût.",
             "Servez chaud, garni de feuilles de coriandre fraîche."
          ],
-         "image": "assets/images/soupe-de-lentilles.png"
+         "image": "../assets/images/soupe-de-lentilles.png"
       },
       {
          "nom":"Pâtes Carbonara",
@@ -192,7 +192,7 @@
             "Si la sauce est trop épaisse, ajoutez un peu d'eau de cuisson réservée pour la diluer.",
             "Servez immédiatement, garni de plus de Parmesan râpé et de poivre noir moulu, si désiré."
          ],
-         "image": "assets/images/pâtes-carbonara.png"
+         "image": "../assets/images/pâtes-carbonara.png"
       },
       {
          "nom":"Risotto aux champignons",
@@ -236,7 +236,7 @@
             "Assaisonnez avec du sel et du poivre selon votre goût.",
             "Servez le risotto chaud, garni de persil frais haché."
          ],
-          "image": "assets/images/risotto-champignons.png"
+          "image": "../assets/images/risotto-champignons.png"
       },
       {
          "nom":"Salade de fruits frais",
@@ -256,7 +256,7 @@
             "Réfrigérez la salade de fruits pendant au moins 30 minutes avant de servir pour permettre aux saveurs de se mélanger.",
             "Au moment de servir, garnissez la salade de fruits frais de feuilles de menthe fraîche."
          ],
-         "image": "assets/images/salade-de-fruits-frais.png"
+         "image": "../assets/images/salade-de-fruits-frais.png"
       },
       {
          "nom":"Ratatouille provençale",
@@ -298,7 +298,7 @@
             "Assaisonnez avec du sel et du poivre selon votre goût.",
             "Servez la ratatouille chaude ou à température ambiante, accompagnée de pain frais ou de riz."
          ],
-         "image": "assets/images/ratatouille-à-la-provençale.png"
+         "image": "../assets/images/ratatouille-à-la-provençale.png"
       },
       {
          "nom":"Salade César",
@@ -338,7 +338,7 @@
             "Mélangez délicatement pour enrober tous les ingrédients de sauce.",
             "Servez immédiatement et dégustez."
          ],
-         "image": "assets/images/salade-cesar.png"
+         "image": "../assets/images/salade-cesar.png"
       },
       {
          "nom":"Muffins aux myrtilles",
@@ -380,7 +380,7 @@
             "Enfournez les muffins pendant environ 20 minutes ou jusqu'à ce qu'ils soient dorés et qu'un cure-dent inséré au centre en ressorte propre.",
             "Laissez refroidir les muffins dans le moule pendant quelques minutes, puis transférez-les sur une grille pour les laisser refroidir complètement avant de déguster."
          ],
-         "image": "assets/images/muffins-aux-myrtilles.png"
+         "image": "../assets/images/muffins-aux-myrtilles.png"
       },
       {
          "nom":"Lasagnes végétariennes",
@@ -423,7 +423,7 @@
             "Retirez le papier aluminium et poursuivez la cuisson pendant encore 15 minutes, jusqu'à ce que le dessus soit doré et croustillant.",
             "Laissez reposer quelques minutes avant de servir."
          ],
-         "image": "assets/images/lasagnes-végétariennes.png"
+         "image": "../assets/images/lasagnes-végétariennes.png"
       },
       {
          "nom":"Salade niçoise",
@@ -467,7 +467,7 @@
             "Versez la vinaigrette sur la salade juste avant de servir et mélangez légèrement pour enrober tous les ingrédients.",
             "Servez immédiatement."
          ],
-         "image": "assets/images/salade-niçoise.png"
+         "image": "../assets/images/salade-niçoise.png"
       },
       {
          "nom":"Tiramisu",
@@ -511,7 +511,7 @@
             "Saupoudrez généreusement de cacao en poudre sur le dessus du tiramisu.",
             "Couvrez le plat et laissez reposer au réfrigérateur pendant au moins 4 heures, idéalement toute une nuit, avant de servir."
          ],
-         "image": "assets/images/tiramisu.png"
+         "image": "../assets/images/tiramisu.png"
       }
    ]
 }
