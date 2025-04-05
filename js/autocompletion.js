@@ -28,3 +28,49 @@ document.addEventListener("DOMContentLoaded", function() {
     //c'est pour appliquer l'autocomplétion au champ de recherche
     autocomplete(document.getElementById("search-recette"), "recettes-list");
 });
+
+document.getElementById("search-button").addEventListener("click", function () {
+        const searchQuery = document.getElementById("search-recette").value.toLowerCase().trim();
+    
+    
+        fetch("../json/data.json")
+            .then(response => response.json())
+            .then(data => {
+                const recetteTrouvee = data.recettes.find(recette => recette.nom.toLowerCase() === searchQuery);
+    
+    
+                if (recetteTrouvee) {
+                    const recetteId = encodeURIComponent(recetteTrouvee.nom);
+                    // Rediriger vers la page des recettes avec un paramètre
+                    window.location.href = `recettes.html?recette=${recetteId}`;
+                } else {
+                    alert("Recette non trouvée !");
+                }
+            })
+            .catch(error => console.error("Erreur de chargement des recettes :", error));
+    });
+    
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        const recetteDemandee = params.get("recette");
+    
+    
+        if (recetteDemandee) {
+            fetch("../json/data.json")
+                .then(response => response.json())
+                .then(data => {
+                    const recetteTrouvee = data.recettes.find(recette =>
+                        recette.nom.toLowerCase() === decodeURIComponent(recetteDemandee).toLowerCase()
+                    );
+    
+    
+                    if (recetteTrouvee) {
+                        ouvrirModal(recetteTrouvee);
+                    } else {
+                        console.warn("Recette non trouvée dans les données JSON :", recetteDemandee);
+                    }
+                })
+                .catch(error => console.error("Erreur de chargement des recettes :", error));
+        }
+    });
