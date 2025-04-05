@@ -7,9 +7,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="m-5 grid gap-10 lg:m-0 lg:my-12 lg:mx-20 lg:items-center"> 
+<body class="bg-green-50 m-5 grid gap-10 lg:m-0 lg:my-12 lg:mx-20 lg:items-center"> 
 
-<!--NAV BAR-->
+    <nav class="bg-green-500 shadow-md p-4 flex justify-between items-center">
+        <a href="../index.html" class="text-3xl font-bold text-white">HappyMeal</a>
+        
+        <ul class="flex gap-12">
+            <li><a href="recettes.html" class="text-gray-700 hover:text-green-600 flex items-center">
+                <img src="../assets/images/recettes.png" alt="Recettes" class="w-12 h-12"> </a></li>
+            <li><a href="favoris.html" class="text-gray-700 hover:text-green-600 flex items-center">
+                <img src="../assets/images/favoris.png" alt="favoris" class="w-12 h-12"> </a></li>
+            <li><a href="courses.html" class="text-gray-700 hover:text-green-600 flex items-center">
+                <img src="../assets/images/courses.png" alt="courses" class="w-12 h-12"> </a></li>
+            <li><a href="planning.html" class="text-gray-700 hover:text-green-600 flex items-center">
+                <img src="../assets/images/calendrier.png" alt="calendrier" class="w-12 h-12"> </a></li>
+        </ul>
+    </nav>
+
     <section class="text-right">
         <input id="search-recette" list="recettes-list" placeholder="Rechercher une recette..." class="w-80 p-2 mb-4 mt-3 border border-green-50"/>
         <datalist id="recettes-list"></datalist>
@@ -32,6 +46,7 @@
     </button>
 
    <script src="../js/courses.js"></script>
-   <script src="../js/pdf.js"></script>
+   <script src="../js/autocompletion.js"></script>
+   <script src="../js/pdfcourses.js"></script>
 </body>
 </html>
