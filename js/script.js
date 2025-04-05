@@ -101,8 +101,8 @@ const recettesParPage = 9;
             `;
         }).join('');
 
-        // const stepsList = document.getElementById('popup-steps');
-        // stepsList.innerHTML = recette.etapes.map(etape => `<li>${etape}</li>`).join('');
+        const stepsList = document.getElementById('popup-steps');
+        stepsList.innerHTML = recette.etapes.map(etape => `<li>${etape}</li>`).join('');
 
         openModal('modelConfirm');
     }
